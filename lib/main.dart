@@ -54,7 +54,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   TextEditingController etInput = new TextEditingController();
 
-  //Menentukan variabel input
+  //Add input variabels
   double input = 0;
   double result = 0;
   double celci = 0;
@@ -62,19 +62,17 @@ class _MyHomePageState extends State<MyHomePage> {
   double fahren = 0;
   double ream = 0;
 
-  // Membuat variabel list dropdown suhu
+  // Add List Dropdown Temperature
   var satuanSuhu = ["Kelvin", "Reamur", "Fahrenheit"];
   String selected = "Kelvin";
   List<String> hasil = [];
   final formKey = GlobalKey<FormState>();
 
-  // Melakukan konversi
+  // Do Conversion
   konversi() {
-    //dengan state
     setState(
       () {
         if (formKey.currentState!.validate()) {
-          // ignore: avoid_print
           print(hasil.length);
           input = double.parse(etInput.text);
           switch (selected) {
@@ -115,13 +113,9 @@ class _MyHomePageState extends State<MyHomePage> {
         }
       },
     );
-    // celcius = double.parse(etInput.text);
-    // reamur = 4 / 5 * celcius;
-    // fahrenheit = (9 / 5 * celcius) + 32;
-    // kelvin = 273.15 + celcius;
   }
 
-  // Membuat Dropdown values
+  // Add Dropdown Values
   DropdownChanged(value) {
     setState(() {
       selected = value.toString();
