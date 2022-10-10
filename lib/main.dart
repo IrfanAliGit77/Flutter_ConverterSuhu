@@ -57,10 +57,6 @@ class _MyHomePageState extends State<MyHomePage> {
   //Add input variabels
   double input = 0;
   double result = 0;
-  double celci = 0;
-  double kelv = 0;
-  double fahren = 0;
-  double ream = 0;
 
   // Add List Dropdown Temperature
   var satuanSuhu = ["Kelvin", "Reamur", "Fahrenheit"];
